@@ -1,4 +1,4 @@
-#ifndef SimpleSocket.hpp
+#ifndef SimpleSocket_hpp
 #define SimpleSocket_hpp
 
 #include <stdio.h>
@@ -20,7 +20,7 @@ namespace HDE{
             SimpleSocket(int domain,int service,
              int protocol, int port, u_long interfce);
             // Virtual function to connect to network
-            virtual int con_to_network(int soc, struct socaddr_in address) = 0;
+            virtual int con_to_network(int soc, struct sockaddr_in address) = 0;
             // function to test sockets and connections
             void test_conn(int);
             struct sockaddr_in get_address();
